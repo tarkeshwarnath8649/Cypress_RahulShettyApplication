@@ -14,7 +14,11 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+beforeEach(() => {
+  cy.intercept({
+    method: "GET",
+    url: "https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty",
+  }).as("retrieveBooks");
+});
