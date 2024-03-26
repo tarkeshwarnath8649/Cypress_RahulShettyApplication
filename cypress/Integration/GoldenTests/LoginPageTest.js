@@ -23,6 +23,7 @@ it("Login via login API", () => {
   HomePage.showOrders();
 });
 
+//.only executes only single IT block
 it.only("Validate count of rows", () => {
   VirtaulLibrary.validateCountOfBooks();
 });
